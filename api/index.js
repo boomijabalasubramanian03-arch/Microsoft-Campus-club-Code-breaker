@@ -1,5 +1,10 @@
 import { ensureDailyChallenge, getDb } from "../server/db.js";
 import { mountRoutes } from "../server/routes.js";
+import app from '../server/app.js';
+
+export default function handler(req, res) {
+  return app(req, res);
+}
 
 const handlers = [];
 
